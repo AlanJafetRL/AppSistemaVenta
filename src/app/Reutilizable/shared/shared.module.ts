@@ -2,7 +2,7 @@ import { importProvidersFrom, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 //Componentes de angular material
 import { MatCardModule } from '@angular/material/card';
@@ -40,7 +40,7 @@ import { MomentDateModule } from '@angular/material-moment-adapter';
     CommonModule,
     ReactiveFormsModule, 
     FormsModule,
-    HttpClient,
+    HttpClientModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,

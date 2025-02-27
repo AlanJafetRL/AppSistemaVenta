@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-usuario',
-  imports: [],
+  //imports: [],
   templateUrl: './usuario.component.html',
-  styleUrl: './usuario.component.css'
+  styleUrl: './usuario.component.css',
+  standalone: false
 })
 export class UsuarioComponent {
 
