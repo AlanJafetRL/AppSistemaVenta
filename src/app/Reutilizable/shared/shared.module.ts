@@ -61,7 +61,7 @@ import { MomentDateModule } from '@angular/material-moment-adapter';
     MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MomentDateModule
+    MomentDateModule    
   ],
   providers:[
     MatDatepickerModule,

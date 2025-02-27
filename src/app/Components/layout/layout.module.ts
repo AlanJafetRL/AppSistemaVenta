@@ -11,7 +11,8 @@ import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta
 import { ReporteComponent } from './Pages/reporte/reporte.component';
 
 import { SharedModule } from '../../Reutilizable/shared/shared.module';
-
+import { LayoutComponent } from './layout.component';
+import { MatToolbar } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { SharedModule } from '../../Reutilizable/shared/shared.module';
     ProductoComponent,
     VentaComponent,
     HistorialVentaComponent,
-    ReporteComponent
+    ReporteComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    
-    SharedModule
+    SharedModule,
+    MatToolbar
   ],
   exports:[
     DashBoardComponent,

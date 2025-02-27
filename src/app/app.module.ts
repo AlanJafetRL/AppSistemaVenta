@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,14 +13,12 @@ import { SharedModule } from './Reutilizable/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    LayoutComponent
+    LoginComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    
     SharedModule
   ],
   providers: [],
