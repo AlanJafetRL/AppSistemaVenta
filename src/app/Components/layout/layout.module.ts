@@ -9,10 +9,11 @@ import { ProductoComponent } from './Pages/producto/producto.component';
 import { VentaComponent } from './Pages/venta/venta.component';
 import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta.component';
 import { ReporteComponent } from './Pages/reporte/reporte.component';
+import { LoginComponent } from '../login/login.component';
 
 import { SharedModule } from '../../Reutilizable/shared/shared.module';
 import { LayoutComponent } from './layout.component';
-import { MatToolbar } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { MatToolbar } from '@angular/material/toolbar';
     VentaComponent,
     HistorialVentaComponent,
     ReporteComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent
+    
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
     SharedModule,
-    MatToolbar
   ],
   exports:[
     DashBoardComponent,

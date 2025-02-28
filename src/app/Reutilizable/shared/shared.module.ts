@@ -29,6 +29,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -61,7 +63,8 @@ import { MomentDateModule } from '@angular/material-moment-adapter';
     MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MomentDateModule    
+    MomentDateModule,
+    MatFormFieldModule
   ],
   providers:[
     MatDatepickerModule,
