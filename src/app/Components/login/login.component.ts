@@ -50,18 +50,26 @@ export class LoginComponent implements OnInit {
         if (data.status) {
           this._utilidadServicio.guardarSesionUsuario(data.value);
           this.router.navigate(['pages']);
-        } else {
+        } /* else if (data.status.toString()=="500") {
           this._utilidadServicio.mostrarAlerta('No se encontraron coincidencias', 'Opps!');
-        }
+        } */  
+       //Retiré esta comparación porque, por alguna razón, la API envia siempre 500, nunca envía false
       },
       complete: () => {
         this.mostrarLoading = false;
       },
-      error: () => {
-        this._utilidadServicio.mostrarAlerta('Hubo un error', 'Changos!');
+      error: (data) => {
+        if (data.status.toString()=="500") {
+          this._utilidadServicio.mostrarAlerta('No se encontraron coincidencias', 'Opps!');
+        } else {
+          this._utilidadServicio.mostrarAlerta('Hubo un error', 'Changos!');
+          this.mostrarLoading = false;
+        }
+
+        this.mostrarLoading = false;
       }
 
-    });
+    })
 
 
   }
