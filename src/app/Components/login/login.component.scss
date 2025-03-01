@@ -1,8 +1,11 @@
+@use '@angular/material' as mat;
+
 .body{
     display: flex;
     justify-content: center;
     height: 100%;
     align-items: center;
+    
 }
 
 .loginCard{
@@ -15,3 +18,4 @@
 .full-width{
     width: 80%;
 }
+

@@ -32,7 +32,6 @@ import { MomentDateModule } from '@angular/material-moment-adapter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -42,7 +41,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CommonModule,
     ReactiveFormsModule, 
     FormsModule,
-    HttpClientModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,

@@ -11,7 +11,7 @@ import { UtilidadService } from '../../Reutilizable/utilidad.service';
   selector: 'app-login',
   //imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.scss',
   standalone: false
 })
 export class LoginComponent implements OnInit {

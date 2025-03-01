@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Sesion } from '../Interfaces/sesion';
-import { throwDialogContentAlreadyAttachedError } from '@angular/cdk/dialog';
 
 
 @Injectable({

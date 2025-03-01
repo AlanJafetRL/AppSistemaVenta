@@ -13,6 +13,7 @@ import { LoginComponent } from '../login/login.component';
 
 import { SharedModule } from '../../Reutilizable/shared/shared.module';
 import { LayoutComponent } from './layout.component';
+import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
 
 
 @NgModule({
@@ -24,13 +25,14 @@ import { LayoutComponent } from './layout.component';
     HistorialVentaComponent,
     ReporteComponent,
     LayoutComponent,
-    LoginComponent
+    LoginComponent,
+    ModalUsuarioComponent
     
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    SharedModule,
+    SharedModule
   ],
   exports:[
     DashBoardComponent,
