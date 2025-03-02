@@ -9,7 +9,6 @@ import { Usuario } from '../../../../Interfaces/usuario';
 import { UsuarioService } from '../../../../Services/usuario.service';
 import { UtilidadService } from '../../../../Reutilizable/utilidad.service';
 import Swal from 'sweetalert2';
-import { resourceLimits } from 'worker_threads';
 
 
 @Component({
@@ -37,7 +36,7 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
       next: (data) => {
         if (data.status) this.dataListaUsuarios.data = data.value;
         else
-          this._utilidadServicio.mostrarAlerta('No se encontraron daots', 'Oops!');
+          this._utilidadServicio.mostrarAlerta('No se encontraron datos', 'Oops!');
       },
       error: (e) => { }
     });

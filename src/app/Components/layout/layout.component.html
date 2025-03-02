@@ -1,14 +1,16 @@
 <mat-toolbar class="header">
     <mat-toolbar-row>
-        <h1>Sistema Venta</h1>
-        <button mat-icon-button (click)="sidenav.toggle();">
+        
+        <button mat-icon-button (click)="sidenav.toggle();" class="iconMenu">
             <mat-icon>menu</mat-icon>
         </button>
+        <h1>Sistema Venta</h1>
 
     </mat-toolbar-row>
 </mat-toolbar>  
 
 <mat-sidenav-container>
+    
     <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;">
         <mat-nav-list>
 
@@ -41,14 +43,13 @@
                 <mat-icon matListItemIcon>receipt</mat-icon>
                 <div matLine>Reportes</div>
             </mat-list-item>
-
         </mat-nav-list>
     </mat-sidenav>
+    
 
 <mat-sidenav-content>
     <div style="height:90vh;">
         <router-outlet></router-outlet>
     </div>
 </mat-sidenav-content>
-
 </mat-sidenav-container>

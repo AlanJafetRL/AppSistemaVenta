@@ -3,5 +3,19 @@
 .header {
     @include mat.toolbar-overrides((
         container-background-color: var(--mat-sys-primary-container),
-    ));
+        container-text-color: var(--mat-sys-on-primary-container)
+        ));
+}
+
+.iconMenu {
+    @include mat.icon-button-overrides((
+        icon-color: var(--mat-sys-on-surface-primary)
+        ));
+}
+
+mat-sidenav{
+    @include mat.sidenav-overrides((
+        container-background-color: var(--mat-sys-secondary-container),
+        container-text-color: var(--mat-sys-on-secondary-container)
+      ));
 }

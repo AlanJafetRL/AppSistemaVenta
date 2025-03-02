@@ -14,6 +14,7 @@ import { LoginComponent } from '../login/login.component';
 import { SharedModule } from '../../Reutilizable/shared/shared.module';
 import { LayoutComponent } from './layout.component';
 import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
+import { ModalProductoComponent } from './Modales/modal-producto/modal-producto.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.com
     ReporteComponent,
     LayoutComponent,
     LoginComponent,
-    ModalUsuarioComponent
+    ModalUsuarioComponent,
+    ModalProductoComponent
     
   ],
   imports: [

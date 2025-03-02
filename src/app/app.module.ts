@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './Reutilizable/shared/shared.module';
+import { ModalProductoComponent } from './Component/Layout/Modales/modal-producto/modal-producto.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalProductoComponent
   ],
   imports: [
     CommonModule,

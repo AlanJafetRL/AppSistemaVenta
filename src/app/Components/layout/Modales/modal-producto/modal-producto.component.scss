@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+mat-form-field{
+    width: 100%;
+    margin: 10px 10px;
+}
+
+form{
+    width: 350px;
+}
+
+.warn{
+    @include mat.button-overrides((
+        filled-container-color: var(--mat-sys-error),
+        filled-label-text-color: var(--mat-sys-on-error)
+    ));
+}

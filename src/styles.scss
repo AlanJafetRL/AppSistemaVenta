@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
 
+
+//---Config defecto---//
 html,
 body {
     height: 100%;
@@ -11,6 +13,8 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+
+//---Definicion del tema---//
 html {
     color-scheme: light dark;
     @include mat.theme((color: mat.$violet-palette,
@@ -21,4 +25,17 @@ html {
 body {
     background: var(--mat-sys-surface);
     color: var(--mat-sys-on-surface);
+}
+
+//Iconos editar y eliminar para componentes usuario, producto
+.primary {
+    @include mat.icon-button-overrides((
+        icon-color: var(--mat-sys-primary)
+        ));
+}
+
+.warn {
+    @include mat.icon-button-overrides((
+        icon-color: var(--mat-sys-error)
+        ));
 }
