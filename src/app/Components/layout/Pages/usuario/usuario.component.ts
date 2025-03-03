@@ -58,41 +58,41 @@ export class UsuarioComponent implements OnInit, AfterViewInit {
   nuevoUsuario() {
     this.dialog.open(ModalUsuarioComponent, {
       disableClose: true
-    }).afterClosed().subscribe(resultado=>{
-      if(resultado=='true') this.obtenerUsuarios();
+    }).afterClosed().subscribe(resultado => {
+      if (resultado == 'true') this.obtenerUsuarios();
     });
   }
 
-  editarUsuario(usuario:Usuario) {
+  editarUsuario(usuario: Usuario) {
     this.dialog.open(ModalUsuarioComponent, {
       disableClose: true,
-      data:usuario
-    }).afterClosed().subscribe(resultado=>{
-      if(resultado=='true') this.obtenerUsuarios();
+      data: usuario
+    }).afterClosed().subscribe(resultado => {
+      if (resultado == 'true') this.obtenerUsuarios();
     });
   }
 
-  eliminarUsuario(usuario:Usuario) {
+  eliminarUsuario(usuario: Usuario) {
     Swal.fire({
-      title:'¿Desea eliminar el usuario',
-      text:usuario.nombreCompleto,
-      icon:'warning',
-      confirmButtonColor:'#3085d6',
-      confirmButtonText:'Sí, eliminar',
-      showCancelButton:true,
-      cancelButtonColor:'#d33',
-      cancelButtonText:'No, volver',
-      theme:'auto',
-    }).then((resultado)=>{
-      if (resultado.isConfirmed){
+      title: '¿Desea eliminar el usuario',
+      text: usuario.nombreCompleto,
+      icon: 'warning',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'Sí, eliminar',
+      showCancelButton: true,
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'No, volver',
+      theme: 'auto',
+    }).then((resultado) => {
+      if (resultado.isConfirmed) {
         this._usuarioServicio.eliminar(usuario.idUsuario).subscribe({
-          next:(data)=>{
-            if(data.status){
-              this._utilidadServicio.mostrarAlerta('El usuario fue eliminado','Listo');
+          next: (data) => {
+            if (data.status) {
+              this._utilidadServicio.mostrarAlerta('El usuario fue eliminado', 'Listo');
               this.obtenerUsuarios();
-            } else this._utilidadServicio.mostrarAlerta('No se pudo eliminar el usuario','Error');
+            } else this._utilidadServicio.mostrarAlerta('No se pudo eliminar el usuario', 'Error');
           },
-          error:(e)=>{}
+          error: (e) => { }
         })
       }
     })

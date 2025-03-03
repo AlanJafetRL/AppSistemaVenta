@@ -29,13 +29,14 @@ body {
 
 //Iconos editar y eliminar para componentes usuario, producto
 .primary {
-    @include mat.icon-button-overrides((
-        icon-color: var(--mat-sys-primary)
-        ));
+    @include mat.icon-button-overrides((icon-color: var(--mat-sys-primary)));
 }
 
 .warn {
-    @include mat.icon-button-overrides((
-        icon-color: var(--mat-sys-error)
+    @include mat.icon-button-overrides((icon-color: var(--mat-sys-error)));
+
+    @include mat.button-overrides((
+            filled-container-color: var(--mat-sys-error),
+            filled-label-text-color: var(--mat-sys-on-error),
         ));
 }
