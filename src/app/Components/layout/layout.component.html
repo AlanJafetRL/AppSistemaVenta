@@ -1,55 +1,66 @@
 <mat-toolbar class="header">
     <mat-toolbar-row>
-        
+
         <button mat-icon-button (click)="sidenav.toggle();" class="iconMenu">
             <mat-icon>menu</mat-icon>
         </button>
         <h1>Sistema Venta</h1>
 
+        <span style="flex: 1 1 auto;"></span>
+        <label style="font-size: 14px; margin-right: 20px;">
+            {{correoUsuario}} | {{rolUsuario}}
+        </label>
+        <button mat-icon-button (click)="cerrarSesion()">
+            <mat-icon>logout</mat-icon>
+        </button>
+
+
     </mat-toolbar-row>
-</mat-toolbar>  
+</mat-toolbar>
 
 <mat-sidenav-container>
-    
+
     <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;">
         <mat-nav-list>
 
-            <mat-list-item routerLink="/pages/dashboard">
-                <mat-icon matListItemIcon>dashboard</mat-icon>
-                <div matLine>Dashboard</div>
-            </mat-list-item>
-
-            <mat-list-item routerLink="/pages/usuarios">
-                <mat-icon matListItemIcon>group</mat-icon>
-                <div matLine>Usuarios</div>
-            </mat-list-item>
-
-            <mat-list-item routerLink="/pages/productos">
-                <mat-icon matListItemIcon>collections_bookmark</mat-icon>
-                <div matLine>Productos</div>
-            </mat-list-item>
-
-            <mat-list-item routerLink="/pages/venta">
-                <mat-icon matListItemIcon>currency_exchange</mat-icon>
-                <div matLine>Venta</div>
-            </mat-list-item>
-
-            <mat-list-item routerLink="/pages/historial_venta">
-                <mat-icon matListItemIcon>edit_note</mat-icon>
-                <div matLine>historial Ventas</div>
-            </mat-list-item>
-
-            <mat-list-item routerLink="/pages/reportes">
-                <mat-icon matListItemIcon>receipt</mat-icon>
-                <div matLine>Reportes</div>
+            <mat-list-item *ngFor="let menu of listaMenus" [routerLink]="menu.url">
+                <mat-icon matListItemIcon>{{menu.icono}}</mat-icon>
+                <div matLine>{{menu.nombre}}</div>
             </mat-list-item>
         </mat-nav-list>
-    </mat-sidenav>
-    
 
-<mat-sidenav-content>
-    <div style="height:90vh;">
-        <router-outlet></router-outlet>
-    </div>
-</mat-sidenav-content>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="height:90vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
 </mat-sidenav-container>
+
+
+<!-- 
+<mat-list-item routerLink="/pages/dashboard">
+    <mat-icon matListItemIcon>dashboard</mat-icon>
+    <div matLine>Dashboard</div>
+</mat-list-item>
+
+<mat-list-item routerLink="/pages/usuarios">
+    <mat-icon matListItemIcon>group</mat-icon>
+    <div matLine>Usuarios</div>
+</mat-list-item>
+
+<mat-list-item routerLink="/pages/productos">
+    <mat-icon matListItemIcon>collections_bookmark</mat-icon>
+    <div matLine>Productos</div>
+</mat-list-item>
+
+<mat-list-item routerLink="/pages/venta">
+    <mat-icon matListItemIcon>currency_exchange</mat-icon>
+    <div matLine>Venta</div>
+</mat-list-item>
+
+<mat-list-item routerLink="/pages/historial_venta">
+    <mat-icon matListItemIcon>edit_note</mat-icon>
+    <div matLine>Historial Ventas</div>
+</mat-list-item> -->
