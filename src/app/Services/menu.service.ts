@@ -5,17 +5,34 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { ResponseApi } from '../Interfaces/response-api';
 
-
+/**
+ * Servicio para el menú
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
-  private urlApi:string=environment.endpoint+"Menu/";
+  /**
+   * URL de la API
+   */
+  private urlApi: string = environment.endpoint + "Menu/";
 
-  constructor(private http:HttpClient) { }
+  /**
+   * Constructor del servicio
+   * 
+   * @param {HttpClient} http Propiedad para realizar peticiones HTTP
+   */
+  constructor(private http: HttpClient) { }
 
-  lista(idUsuario:number):Observable<ResponseApi>{
+
+  /**
+   * Obtiene la lista de menús
+   * 
+   * @param {number} idUsuario Identificador del usuario
+   * @returns {Observable<ResponseApi>} Lista de menús
+   */
+  lista(idUsuario: number): Observable<ResponseApi> {
     return this.http.get<ResponseApi>(`${this.urlApi}Lista?idUsuario=${idUsuario}`)
   }
 }

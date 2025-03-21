@@ -5,7 +5,9 @@ import { Venta } from '../../../../Interfaces/venta';
 import { DetalleVenta } from '../../../../Interfaces/detalle-venta';
 import { VentaComponent } from '../../Pages/venta/venta.component';
 
-
+/**
+ * Componente para el modal de detalle de venta (muestra los detalles de una venta)
+ */
 @Component({
   selector: 'app-modal-detalle-venta',
   standalone: false,
@@ -14,6 +16,7 @@ import { VentaComponent } from '../../Pages/venta/venta.component';
 })
 export class ModalDetalleVentaComponent implements OnInit {
 
+  // Variables para los datos de la venta
   fechaRegistro: string = '';
   numeroDocumento: string = '';
   tipoPago: string = '';
@@ -21,7 +24,10 @@ export class ModalDetalleVentaComponent implements OnInit {
   detalleVenta: DetalleVenta[] = [];
   columnasTabla: string[] = ['producto', 'cantidad', 'precio', 'total'];
 
-
+  /**
+   * Constructor del componente
+   * @param _venta Variable para los datos de la venta
+   */
   constructor(@Inject(MAT_DIALOG_DATA) public _venta: Venta) {
     this.fechaRegistro = _venta.fechaRegistro!;
     this.numeroDocumento = _venta.numeroDocumento!;

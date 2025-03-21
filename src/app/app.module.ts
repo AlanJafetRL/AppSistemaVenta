@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; 
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';  //Importa el módulo de rutas de la aplicación
+import { AppComponent } from './app.component'; //Importa el componente principal de la aplicación
 
-import { SharedModule } from './Reutilizable/shared/shared.module';
-import { ModalProductoComponent } from './Component/Layout/Modales/modal-producto/modal-producto.component';
+import { SharedModule } from './Reutilizable/shared/shared.module'; //Importa el módulo de componentes reutilizables
+import { ModalProductoComponent } from './Components/layout/Modales/modal-producto/modal-producto.component'; //Importa el componente de modal de producto
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ModalProductoComponent
+    AppComponent, //Declara el componente principal de la aplicación 
+    ModalProductoComponent  //Declara el componente de modal de producto 
   ],
   imports: [
-    CommonModule,
-    AppRoutingModule,
-    SharedModule
+    CommonModule, //Importa el módulo de componentes comunes
+    AppRoutingModule, //Importa el módulo de rutas de la aplicación
+    SharedModule  //Importa el módulo de componentes reutilizables
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //Arranca la aplicación con el componente principal
 })
 export class AppModule { }

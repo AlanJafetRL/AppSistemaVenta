@@ -31,7 +31,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-
+/**
+ * Modulo que contiene los modulos a utilizar en toda la aplicacion
+ */
 @NgModule({
   declarations: [],
   imports: [
